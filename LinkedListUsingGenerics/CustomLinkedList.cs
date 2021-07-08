@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 /// <summary>
 /// UC1-Insert from last and display the nodes
+/// UC2-Insert front the element
 /// </summary>
 namespace LinkedListUsingGenerics
 {
@@ -26,9 +27,16 @@ namespace LinkedListUsingGenerics
                 Node lastNode = GetLastNode();
                 lastNode.next = new_node;
             }
-            Console.WriteLine("Inserted into list " + new_node.data);
+            Console.WriteLine("Inserted into list from last " + new_node.data);
         }
-
+        //Insert Front 
+        public void InsertFront(int new_data)
+        {
+            Node new_node = new Node(new_data);
+            new_node.next = this.head;
+            this.head = new_node;
+            Console.WriteLine("Inserted the list in front " + new_node.data);
+        }
         public Node GetLastNode()
         {
             Node temp = this.head;
@@ -52,7 +60,7 @@ namespace LinkedListUsingGenerics
             {
                 while(temp!=null)
                 {
-                    Console.WriteLine(" " + temp.data + " ");
+                    Console.Write(" " + temp.data + " ");
                     temp = temp.next;
                 }
             }
