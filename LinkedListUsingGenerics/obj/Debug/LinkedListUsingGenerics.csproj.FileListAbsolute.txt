@@ -1,0 +1,7 @@
+C:\Users\Radhika\source\repos\LinkedListUsingGenerics\LinkedListUsingGenerics\bin\Debug\LinkedListUsingGenerics.exe.config
+C:\Users\Radhika\source\repos\LinkedListUsingGenerics\LinkedListUsingGenerics\bin\Debug\LinkedListUsingGenerics.exe
+C:\Users\Radhika\source\repos\LinkedListUsingGenerics\LinkedListUsingGenerics\bin\Debug\LinkedListUsingGenerics.pdb
+C:\Users\Radhika\source\repos\LinkedListUsingGenerics\LinkedListUsingGenerics\obj\Debug\LinkedListUsingGenerics.csproj.AssemblyReference.cache
+C:\Users\Radhika\source\repos\LinkedListUsingGenerics\LinkedListUsingGenerics\obj\Debug\LinkedListUsingGenerics.csproj.CoreCompileInputs.cache
+C:\Users\Radhika\source\repos\LinkedListUsingGenerics\LinkedListUsingGenerics\obj\Debug\LinkedListUsingGenerics.exe
+C:\Users\Radhika\source\repos\LinkedListUsingGenerics\LinkedListUsingGenerics\obj\Debug\LinkedListUsingGenerics.pdb
