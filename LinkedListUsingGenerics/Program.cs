@@ -14,8 +14,9 @@ namespace LinkedListUsingGenerics
             Console.WriteLine("**********1.Inserted into list(From Last)************");
             Console.WriteLine("**********2.Inserted into list(Front)************");
             Console.WriteLine("**********3.Inserting in middle***********");
-            Console.WriteLine("**********4.Deleting the First Element***********");
-            Console.WriteLine("Enter the option");
+            Console.WriteLine("**********4.Delete the First Element***********");
+            Console.WriteLine("**********5.Delete the Last Element***********");
+            Console.WriteLine("Enter the option!!!");
             int num = Convert.ToInt32(Console.ReadLine());
             //Creating object for Custom Linked list class
             CustomLinkedList custom = new CustomLinkedList();
@@ -46,6 +47,14 @@ namespace LinkedListUsingGenerics
                     custom.DeleteFirst();
                     custom.Display();
                     break;
+                case 5:
+                    custom.InsertLast(56);
+                    custom.InsertLast(30);
+                    custom.InsertLast(70);
+                    custom.DeleteLast();
+                    custom.Display();
+                    break;
+
             }
             Console.ReadLine();
         }

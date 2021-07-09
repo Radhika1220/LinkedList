@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 /// UC2-Insert front the element
 /// UC3-Appending in list(same as insert at last)
 /// UC4-Insertion between nodes
+/// UC5-Deletion the first element
 /// </summary>
 namespace LinkedListUsingGenerics
 {
@@ -79,6 +80,7 @@ namespace LinkedListUsingGenerics
 
             }
         }
+        //Deleting the first node
         public Node DeleteFirst()
         {
             if(this.head==null)
@@ -88,7 +90,26 @@ namespace LinkedListUsingGenerics
             this.head = this.head.next;
             return this.head;
         }
+        public Node DeleteLast()
+        {
+            Node newNode = this.head;
+            if(this.head==null)
+            {
+                return null;
+            }
+            if(this.head.next==null)
+            {
+                this.head = null;
+                return null;
+            }
+            while(newNode.next.next!=null)
+            {
+                newNode = newNode.next;
+            }
+            newNode.next = null;
+            return newNode;
 
+        }
         //Display the nodes
         public void Display()
         {
