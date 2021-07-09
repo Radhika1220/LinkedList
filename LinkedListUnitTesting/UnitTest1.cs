@@ -10,14 +10,17 @@ namespace LinkedListUnitTesting
         CustomLinkedList list = new CustomLinkedList();
        
         [TestMethod]
-        public void TestSearchMethod()
+     
+
+        public void TestSearchAndInsertMethod()
         {
-            list.InsertLast(70);
-            list.InsertLast(30);
             list.InsertLast(56);
-            int actualValue = list.Search(30);
-            int expectedValue = 30;
-            Assert.AreEqual(expectedValue, actualValue);
+            list.InsertLast(30);
+            list.InsertLast(70);
+            int actual = list.InsertBetween(30, 40);
+            int expected = 40;
+            Assert.AreEqual(expected, actual);
+
         }
     }
 }

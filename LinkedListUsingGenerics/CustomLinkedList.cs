@@ -50,17 +50,19 @@ namespace LinkedListUsingGenerics
             return temp;
         }
         //Insertion at middle
-        public void InsertBetween(int pos, int new_data)
+        public void InsertMiddle(int pos, int new_data)
         { 
             Node newNode = new Node(new_data);
             if (pos == 1)
             {
                 newNode.next = this.head;
                 head = newNode;
+           
             }
             else if (pos <= 0)
             {
                 Console.WriteLine("Invalid Position!!!");
+                return;
             }
             else if (pos > 0)
             {
@@ -78,9 +80,10 @@ namespace LinkedListUsingGenerics
                     Console.WriteLine(pos);
                    pos--;
                 }
-
+              
             }
         }
+
         //Deleting the first node
         public Node DeleteFirst()
         {
@@ -112,8 +115,19 @@ namespace LinkedListUsingGenerics
             return newNode;
 
         }
+        //Searching the particular element
+        //-->If element is found,then after that insert the element..
+        public int InsertBetween(int searchdata, int data)
+        {
+            Node temp = Search(searchdata);
+            Node newNode = new Node(data);
+            newNode.next = temp.next;
+            temp.next = newNode;
+            return (newNode.data);
+
+        }
         //Searching the particular element in linked list
-       public int Search(int value)
+        public Node Search(int value)
         {
             Node temp = this.head;
             while(temp!=null)
@@ -121,13 +135,13 @@ namespace LinkedListUsingGenerics
                 if(temp.data==value)
                 {
                     Console.WriteLine("Element found.. " + value);
-                    return value;
+                    return temp;
                 }
                 temp = temp.next;
             
             }
             Console.WriteLine("Element not found!!!!!!!!");
-            return value;
+            return default;
         }
         //Display the nodes
         public void Display()

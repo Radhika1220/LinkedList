@@ -17,6 +17,7 @@ namespace LinkedListUsingGenerics
             Console.WriteLine("**********4.Delete the First Element***********");
             Console.WriteLine("**********5.Delete the Last Element***********");
             Console.WriteLine("**********6.Searching the Element***********");
+            Console.WriteLine("***********7.Using Search operation to find which position to insert******");
             Console.WriteLine("Enter the option!!!");
             int num = Convert.ToInt32(Console.ReadLine());
             //Creating object for Custom Linked list class
@@ -38,7 +39,7 @@ namespace LinkedListUsingGenerics
                 case 3:
                     custom.InsertLast(56);
                     custom.InsertLast(70);
-                    custom.InsertBetween(2, 30);
+                    custom.InsertMiddle(2, 30);
                     custom.Display();
                     break;
                 case 4:
@@ -60,6 +61,13 @@ namespace LinkedListUsingGenerics
                     custom.InsertLast(30);
                     custom.InsertLast(70);
                     custom.Search(56);
+                    break;
+                case 7:
+                    custom.InsertLast(56);
+                    custom.InsertLast(30);
+                    custom.InsertLast(70);
+                    custom.InsertBetween(30, 40);
+                    custom.Display();
                     break;
             }
             Console.ReadLine();
