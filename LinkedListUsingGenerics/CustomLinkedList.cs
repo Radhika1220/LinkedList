@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 namespace LinkedListUsingGenerics
 {
 
-    class CustomLinkedList
+   public  class CustomLinkedList
     {
         //Creating a head node to point the first element
         public Node head;
@@ -49,6 +49,7 @@ namespace LinkedListUsingGenerics
             }
             return temp;
         }
+        //Insertion at middle
         public void InsertBetween(int pos, int new_data)
         { 
             Node newNode = new Node(new_data);
@@ -90,6 +91,7 @@ namespace LinkedListUsingGenerics
             this.head = this.head.next;
             return this.head;
         }
+        //Deleting the last node
         public Node DeleteLast()
         {
             Node newNode = this.head;
@@ -109,6 +111,23 @@ namespace LinkedListUsingGenerics
             newNode.next = null;
             return newNode;
 
+        }
+        //Searching the particular element in linked list
+       public int Search(int value)
+        {
+            Node temp = this.head;
+            while(temp!=null)
+            {
+                if(temp.data==value)
+                {
+                    Console.WriteLine("Element found.. " + value);
+                    return value;
+                }
+                temp = temp.next;
+            
+            }
+            Console.WriteLine("Element not found!!!!!!!!");
+            return value;
         }
         //Display the nodes
         public void Display()
