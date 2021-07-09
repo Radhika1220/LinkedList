@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 /// UC1-Insert from last and display the nodes
 /// UC2-Insert front the element
 /// UC3-Appending in list(same as insert at last)
+/// UC4-Insertion between nodes
 /// </summary>
 namespace LinkedListUsingGenerics
 {
@@ -18,25 +19,25 @@ namespace LinkedListUsingGenerics
         //Creating a method to insert last 
         public void InsertLast(int new_data)
         {
-            Node new_node = new Node(new_data);
+            Node newNode = new Node(new_data);
             if (this.head == null)
             {
-                this.head = new_node;
+                this.head = newNode;
             }
             else
             {
                 Node lastNode = GetLastNode();
-                lastNode.next = new_node;
+                lastNode.next = newNode;
             }
-            Console.WriteLine("Inserted into list from last " + new_node.data);
+            Console.WriteLine("Inserted into list from last " + newNode.data);
         }
         //Insert Front 
         public void InsertFront(int new_data)
         {
-            Node new_node = new Node(new_data);
-            new_node.next = this.head;
-            this.head = new_node;
-            Console.WriteLine("Inserted the list in front " + new_node.data);
+            Node newNode = new Node(new_data);
+            newNode.next = this.head;
+            this.head = newNode;
+            Console.WriteLine("Inserted the list in front " + newNode.data);
         }
         public Node GetLastNode()
         {
@@ -47,19 +48,6 @@ namespace LinkedListUsingGenerics
             }
             return temp;
         }
-
-        public void Append(int new_data)
-        {
-            Node temp = this.head;
-            while (temp != null)
-            {
-                temp = temp.next;
-            }
-            Node new_node = new Node(new_data);
-            temp.next = new_node;
-
-        }
-
         public void InsertBetween(int pos, int new_data)
         { 
             Node newNode = new Node(new_data);
