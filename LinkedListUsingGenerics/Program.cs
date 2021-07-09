@@ -13,6 +13,7 @@ namespace LinkedListUsingGenerics
             Console.WriteLine("****WELCOME TO LINKED LIST OPERATIONS");
             Console.WriteLine("**********1.Inserted into list(From Last)************");
             Console.WriteLine("**********2.Inserted into list(Front)************");
+            Console.WriteLine("**********3.Inserting in middle***********");
             int num = Convert.ToInt32(Console.ReadLine());
             //Creating object for Custom Linked list class
             CustomLinkedList custom = new CustomLinkedList();
@@ -28,6 +29,12 @@ namespace LinkedListUsingGenerics
                     custom.InsertFront(56);
                     custom.InsertFront(30);
                     custom.InsertFront(70);
+                    custom.Display();
+                    break;
+                case 3:
+                    custom.InsertLast(56);
+                    custom.InsertLast(70);
+                    custom.InsertBetween(2, 30);
                     custom.Display();
                     break;
             }
