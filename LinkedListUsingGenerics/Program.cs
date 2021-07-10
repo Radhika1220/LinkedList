@@ -10,6 +10,8 @@ namespace LinkedListUsingGenerics
     {
         static void Main(string[] args)
         {
+
+          
             Console.WriteLine("****WELCOME TO LINKED LIST OPERATIONS");
             Console.WriteLine("**********1.Inserted into list(From Last)************");
             Console.WriteLine("**********2.Inserted into list(Front)************");
@@ -18,6 +20,7 @@ namespace LinkedListUsingGenerics
             Console.WriteLine("**********5.Delete the Last Element***********");
             Console.WriteLine("**********6.Searching the Element***********");
             Console.WriteLine("***********7.Using Search operation to find which position to insert******");
+            Console.WriteLine("**********8.Delete the element and find size of list******");
             Console.WriteLine("Enter the option!!!");
             int num = Convert.ToInt32(Console.ReadLine());
             //Creating object for Custom Linked list class
@@ -69,8 +72,19 @@ namespace LinkedListUsingGenerics
                     custom.InsertBetween(30, 40);
                     custom.Display();
                     break;
+                case 8:
+                    custom.InsertFront(70);
+                    custom.InsertFront(40);
+                    custom.InsertFront(30);
+                    custom.InsertFront(56);
+                    custom.Display();
+                    custom.DeleteInBetween(40);
+                    custom.Display();
+                    break;
             }
             Console.ReadLine();
         }
     }
+
+   
 }
