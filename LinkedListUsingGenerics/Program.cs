@@ -8,6 +8,7 @@ namespace LinkedListUsingGenerics
 {
     class Program
     {
+       
         static void Main(string[] args)
         {
             Console.WriteLine("****WELCOME TO LINKED LIST OPERATIONS");
@@ -18,10 +19,13 @@ namespace LinkedListUsingGenerics
             Console.WriteLine("**********5.Delete the Last Element***********");
             Console.WriteLine("**********6.Searching the Element***********");
             Console.WriteLine("***********7.Using Search operation to find which position to insert******");
+            Console.WriteLine("*******8.Using search operation to find element and delete that element which mentioned");
+            Console.WriteLine("********9.Sorting the element in linked list*********");
             Console.WriteLine("Enter the option!!!");
             int num = Convert.ToInt32(Console.ReadLine());
             //Creating object for Custom Linked list class
             CustomLinkedList custom = new CustomLinkedList();
+           
             switch(num)
             {
                 case 1:
@@ -67,6 +71,22 @@ namespace LinkedListUsingGenerics
                     custom.InsertLast(30);
                     custom.InsertLast(70);
                     custom.InsertBetween(30, 40);
+                    custom.Display();
+                    break;
+                case 8:
+                    custom.InsertLast(56);
+                    custom.InsertLast(30);
+                    custom.InsertLast(40);
+                    custom.InsertLast(70);
+                    custom.DeleteInBetween(40);
+                    custom.Display();
+                    break;
+                case 9:
+                    custom.InsertLast(56);
+                    custom.InsertLast(30);
+                    custom.InsertLast(40);
+                    custom.InsertLast(70);
+                    custom.Sort();
                     custom.Display();
                     break;
             }
